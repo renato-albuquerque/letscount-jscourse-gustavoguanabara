@@ -17,7 +17,7 @@ body {
 header {
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 section {
@@ -49,6 +49,14 @@ section .btnCount {
     font-weight: bolder;
     padding: 8px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.521);
+}
+
+section .btnCount:hover {
+    background-color: mediumblue;
+}
+
+section #result {
+    font-style: italic;
 }
 
 footer {
