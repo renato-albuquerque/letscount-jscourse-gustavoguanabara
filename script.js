@@ -6,27 +6,39 @@ function count() {
     let result = document.querySelector("#result")
 
     if(start.value.length == 0 || end.value.length == 0 || step.value.length == 0) {    /* Check if each input box is empty. */
-        alert("[ERROR] Data is missing.")
-    } else {
-        result.innerHTML = `The result is: `
+        // alert("[ERROR] Data is missing.")
+        result.innerHTML = "Impossible to count."
         result.style.color = "red"
         result.style.fontWeight = "bold"
+        result.style.fontStyle = "italic"
+    } else {
+        result.innerHTML = `The result is: <br>`
+        result.style.color = "red"
+        result.style.fontWeight = "bold"
+        result.style.fontStyle = "italic"
+        
+        let s = Number(start.value)
+        let e = Number(end.value)
+        let st = Number(step.value)
 
-        let sta = Number(start.value)
-        let end = Number(end.value)
-        let ste = Number(step.value)
-
-        for(let c = sta; c <= end; c += ste) {
-            result.innerHTML += 
+        if(st <= 0) {
+            alert("Invalid step. It will be considered step equal to 1.")
+            st = 1
         }
 
-
-
-
-    }
-    
-
-
-    
-    
+        if(s < e) {
+            // Count up
+            for(let c = s; c <= e; c += st) {
+                result.innerHTML += `${c} &#128073; `   /* Source to emojis: https://www.w3schools.com/charsets/ref_emoji.asp*/  
+                /*Another way to write emoji: \u{1F449} */
+            }
+            result.innerHTML += "&#127937;"     
+        } else {
+            // Countdown
+            for(let c = s; c >= e; c-= st) {
+                result.innerHTML += `${c} &#128073; ` 
+            }
+            result.innerHTML += "&#127937;"     
+        }
+    }    
 }
