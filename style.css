@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: none; */
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: rgb(70, 142, 236);
+    font: normal 12pt arial;
+    width: 320px;
+    margin: auto;
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 280px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.521);
+}
+
+section div {
+    padding: 10px;
+}
+
+section div input {
+    width: 150px;
+    padding: 5px;
+    color: midnightblue;
+    font-weight: bolder;
+}
+
+section .btnCount {
+    width: 100px;
+    background-color: midnightblue;
+    color: azure;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    padding: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.521);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    padding: 30px;
+}
