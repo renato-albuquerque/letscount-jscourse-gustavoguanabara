@@ -5,7 +5,7 @@ function count() {
     /* let btnCount = document.querySelector(".btnCount") */
     let result = document.querySelector("#result")
 
-    if(start.value.length == 0 || end.value.length == 0 || step.value.length == 0) {    /* Check if each input box is empty. */
+    if(start.value.length == 0 || end.value.length == 0 || step.value.length == 0) {    /* Check if one of input box is empty. */
         // alert("[ERROR] Data is missing.")
         result.innerHTML = "Impossible to count."
         result.style.color = "red"
